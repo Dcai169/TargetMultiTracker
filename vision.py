@@ -5,7 +5,6 @@ import grip4 as grip
 # import ntinter as nt
 import numpy as np
 import pprint
-import fps
 
 print('VERSION')
 print(cv2.__version__)
@@ -16,7 +15,6 @@ pp = pprint.PrettyPrinter()
 rl_points = TARGET
 debug = False
 
-fps = fps.FPS()
 
 dist_mat = np.zeros((4, 1))
 # frame = np.zeros([640, 480, 3], dtype=np.uint8)
@@ -66,10 +64,7 @@ while True:
 
     cv2.imshow('Contours', normal)
 
-    fps.update()
 
     k = cv2.waitKey(5) & 0xFF
     if k == 27:
-        fps.stop()
         break
-print("FPS: "+str(fps.fps()))
