@@ -1,4 +1,3 @@
 opencv-python==3.4.4.19
 numpy
-pynetworktables
-
+# pynetworktables
