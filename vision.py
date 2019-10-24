@@ -6,6 +6,7 @@ import grip4 as grip
 import numpy as np
 import pprint
 
+
 print('VERSION')
 print(cv2.__version__)
 
@@ -15,10 +16,9 @@ pp = pprint.PrettyPrinter()
 rl_points = TARGET
 debug = False
 
-
 dist_mat = np.zeros((4, 1))
 # frame = np.zeros([640, 480, 3], dtype=np.uint8)
-fps.start()
+
 while True:
     # Read the frame and process it using the GRIP-generated pipeline
     _, frame = cap.read()
@@ -64,7 +64,7 @@ while True:
 
     cv2.imshow('Contours', normal)
 
-
     k = cv2.waitKey(5) & 0xFF
     if k == 27:
         break
+
